@@ -292,9 +292,7 @@ public class ApplicationDbContext : DbContext
 
 本项目采用MIT许可证 - 详见 [LICENSE](LICENSE) 文件
 
-## 联系方式
 
-项目链接: [https://github.com/yourusername/NiceWebCode](https://github.com/yourusername/NiceWebCode)
 
 ---
 
