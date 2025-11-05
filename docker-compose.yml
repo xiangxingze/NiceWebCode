@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  webapi:
+    build:
+      context: .
+      dockerfile: src/NiceWebCode.WebApi/Dockerfile
+    ports:
+      - "5000:8080"
+      - "5001:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080;https://+:8081
+      - ConnectionStrings__DefaultConnection=Data Source=/data/nicewebcode.db
+      - WorkspaceBasePath=/data/workspaces
+    volumes:
+      - nicewebcode-data:/data
+    restart: unless-stopped
+    networks:
+      - nicewebcode-network
+
+volumes:
+  nicewebcode-data:
+
+networks:
+  nicewebcode-network:
+    driver: bridge

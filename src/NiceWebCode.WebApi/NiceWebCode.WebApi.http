@@ -1,0 +1,6 @@
+@NiceWebCode.WebApi_HostAddress = http://localhost:5197
+
+GET {{NiceWebCode.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
